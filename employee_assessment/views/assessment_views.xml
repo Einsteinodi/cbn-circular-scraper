@@ -19,6 +19,12 @@
         <field name="model">employee.assessment</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="action_compute_score"
+                            string="Compute Score"
+                            type="object"
+                            class="oe_highlight"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="customer_id"/>
@@ -38,14 +44,7 @@
                         <field name="final_score" readonly="1"/>
                         <field name="assessment_date" readonly="1"/>
                     </group>
-
-                    <footer>
-                        <button name="action_compute_score"
-                                string="Compute Score"
-                                type="object"
-                                class="btn-primary"/>
-                    </footer>
-                </sheet>
+                </sheet>   
             </form>
         </field>
     </record>
@@ -63,3 +62,4 @@
               parent="menu_employee_assessment_root"
               action="action_employee_assessment"/>
 </odoo>
+
