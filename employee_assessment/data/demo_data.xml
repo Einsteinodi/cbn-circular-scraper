@@ -1,0 +1,25 @@
+
+
+<odoo>
+    <record id="employee_demo_1" model="employee.assessment">
+        <field name="customer_id">EMP001</field>
+        <field name="name">Mary Mash</field>
+        <field name="email">mary@gmail.com</field>
+        <field name="department">IT</field>
+        <field name="character">80</field>
+        <field name="punctuality">75</field>
+        <field name="engagement">85</field>
+        <field name="skills">90</field>
+    </record>
+
+    <record id="employee_demo_2" model="employee.assessment">
+        <field name="customer_id">EMP002</field>
+        <field name="name">John Doe</field>
+        <field name="email">john@example.com</field>
+        <field name="department">HR</field>
+        <field name="character">70</field>
+        <field name="punctuality">80</field>
+        <field name="engagement">78</field>
+        <field name="skills">88</field>
+    </record>
+</odoo>
