@@ -1,22 +1,32 @@
 <odoo>
-    <record id="email_template_assessment" model="mail.template">
-        <field name="name">Assessment Result</field>
-        <field name="model_id" ref="model_employee_assessment"/>
-        <field name="subject">Assessment Result for ${object.name}</field>
-        <field name="email_to">${object.email}</field>
-        <field name="body_html">
-            <![CDATA[
-            <p>Hello ${object.name},</p>
-            <p>Your assessment results:</p>
-            <ul>
-                <li>Character: ${object.character}</li>
-                <li>Punctuality: ${object.punctuality}</li>
-                <li>Engagement: ${object.engagement}</li>
-                <li>Skills: ${object.skills}</li>
-            </ul>
-            <p><b>Final Score: ${object.final_score}</b></p>
-            <p>Date: ${object.assessment_date}</p>
-            ]]>
-        </field>
-    </record>
+    <data>
+
+        <record id="email_template_assessment" model="mail.template">
+            <field name="name">Assessment Result</field>
+            <field name="model_id" ref="model_employee_assessment"/>
+            <field name="subject">Assessment Result for ${object.name}</field>
+            <field name="email_to">${object.email}</field>
+
+            <field name="body_html" type="html">
+                <div>
+                    <p>Hello <t t-out="object.name"/>,</p>
+                    <p>Your assessment results:</p>
+                    <ul>
+                        <li>Character: <t t-out="object.character"/></li>
+                        <li>Punctuality: <t t-out="object.punctuality"/></li>
+                        <li>Engagement: <t t-out="object.engagement"/></li>
+                        <li>Skills: <t t-out="object.skills"/></li>
+                    </ul>
+                    <p>
+                        <strong>
+                            Final Score:
+                            <t t-out="object.final_score"/>
+                        </strong>
+                    </p>
+                    <p>Date: <t t-out="object.assessment_date"/></p>
+                </div>
+            </field>
+        </record>
+
+    </data>
 </odoo>
