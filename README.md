@@ -18,7 +18,7 @@ This module extends Odoo HR to provide structured employee performance assessmen
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/YOURUSERNAME/employee-assessment-odoo.git
+   git clone https://https://github.com/Einsteinodi/cbn-circular-scraper.git
    ```
 
 2. Copy the folder **employee_assessment** into your Odoo custom addons path.
