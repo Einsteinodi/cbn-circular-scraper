@@ -1,31 +1,33 @@
-# CBN Circular PDF Scraper
+# Employee Assessment Module – Odoo 19
 
-A Python script to scrape circulars from the [Central Bank of Nigeria (CBN)](https://www.cbn.gov.ng/Documents/circulars.html) website, download the PDF documents, and save metadata to a JSON file.
+## 📌 Description
+This module extends Odoo HR to provide structured employee performance assessments. Managers can evaluate employees, assign ratings, and track performance history.
 
----
+## ⚙️ Features
+- Employee evaluation forms
+- Rating system
+- Manager comments
+- Performance history
 
-## Features
+## 🏗 Built With
+- Odoo 19 Community
+- Python
+- XML (Odoo Views)
 
-- Scrapes circulars dynamically using **Selenium**.
-- Downloads PDFs to a local folder (`cbn_pdfs/`).
-- Saves a JSON file (`cbn_circulars.json`) containing:
-  - `title` – Title of the circular
-  - `date` – Publication date
-  - `url` – Direct URL to the PDF
-  - `local_file` – Path to the downloaded PDF
-- Option to run **headless** (Firefox runs in background).
+## 🚀 How to Install
 
----
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/YOURUSERNAME/employee-assessment-odoo.git
+   ```
 
-## Requirements
+2. Copy the folder **employee_assessment** into your Odoo custom addons path.
 
-- Python 3.9+
-- [Selenium](https://pypi.org/project/selenium/)
-- [Requests](https://pypi.org/project/requests/)
-- Firefox Browser
-- [Geckodriver](https://github.com/mozilla/geckodriver/releases)
+3. Add path to `odoo.conf`:
+   ```
+   addons_path = C:\Program Files\Odoo 19.0.20260119\server\odoo\addons, C:\yourpath\employee-assessment-odoo
+   ```
 
-Install Python dependencies via pip:
+4. Restart Odoo server.
 
-```bash
-pip install selenium requests
+5. Go to Apps → Update Apps List → Search "Employee Assessment" → Install.
